@@ -1,7 +1,7 @@
 var path = require('path');
 
 var profiles = require('../data/friends.js');
-
+console.log(profiles);
 module.exports = function (app) {
 
 	// Express routes
@@ -15,7 +15,8 @@ module.exports = function (app) {
 	app.post('/api/friends', function(req, res) {
 		// handle incoming posts, handle compatibility logic
 		
-		console.log(req);
+//		console.log(req.body);
+		profiles.push(req.body);
 	});
 
 }
