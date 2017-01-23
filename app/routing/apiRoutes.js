@@ -17,6 +17,8 @@ module.exports = function (app) {
 		
 //		console.log(req.body);
 		profiles.push(req.body);
+		console.log('-----');
+		console.log(profiles);
 	});
 
 }
