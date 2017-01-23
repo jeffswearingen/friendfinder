@@ -1,10 +1,17 @@
-// Express routes
-// ==============
+var path = require('path');
 
-api.get('/api/friends', function(req, res) {
-	// show all friends
-});
+module.exports = function (app) {
 
-api.post('/api/friends', function(req, res) {
-	// handle incoming posts, handle compatibility logic
-});
+	// Express routes
+	// ==============
+
+	app.get('/api/friends', function(req, res) {
+		// show all friends
+	});
+
+	app.post('/api/friends', function(req, res) {
+		// handle incoming posts, handle compatibility logic
+		console.log(req);
+	});
+
+}

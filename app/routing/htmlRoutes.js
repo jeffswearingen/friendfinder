@@ -1,10 +1,15 @@
-// Express routes
-// ==============
+var path = require('path');
 
-app.get('/survey', function(req, res) {
-	res.sendFile(path.join(__dirname, '/survey.html'));
-});
+module.exports = function (app) {
+	// Express routes
+	// ==============
 
-app.use('/', function(req, res) {
-	res.sendFile(path.join(__dirname, '/home.html'));
-});
+	app.get('/survey', function(req, res) {
+		res.sendFile(path.join(__dirname, '../../app/public/survey.html'));
+	});
+
+	app.use('/', function(req, res) {
+		res.sendFile(path.join(__dirname, '../../app/public/home.html'));
+	});
+
+}
