@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+	<header>
+		<title>Friend Finder</title>
+		<script src="https://code.jquery.com/jquery.js"></script>
+	</header>
+	<body>
+		<div>
+			<h1>Friend Finder</h1>
+		</div>
+		<div>
+			<h2>Answer some questions about yourself</h2>
+			<h3>Name</h3>
+				<input type="text" id="name" required> 
+			<h3>Photo</h3>
+				<input type="text" id="photo" required>
+			<h3>Question 1</h3>
+				<select data-placeholder="" id="q1">
+					<option value=""></option>
+					<option value="1">1 - Strongly Agree</option>
+					<option value="2">2 - Agree</option>
+					<option value="3">3 - Neutral</option>
+					<option value="4">4 - Disagree</option>
+					<option value="5">5 - Strongly Disagree</option>
+				</select>
+			<h3>Question 2</h3>
+				<select id="q2">
+					<option value=""></option>
+					<option value="1">1 - Strongly Agree</option>
+					<option value="2">2 - Agree</option>
+					<option value="3">3 - Neutral</option>
+					<option value="4">4 - Disagree</option>
+					<option value="5">5 - Strongly Disagree</option>
+				</select>
+			<h3>Question 3</h3>
+				<select id="q3">
+					<option value=""></option>
+					<option value="1">1 - Strongly Agree</option>
+					<option value="2">2 - Agree</option>
+					<option value="3">3 - Neutral</option>
+					<option value="4">4 - Disagree</option>
+					<option value="5">5 - Strongly Disagree</option>
+				</select>
+			<h3>Question 4</h3>
+				<select id="q4">
+					<option value=""></option>
+					<option value="1">1 - Strongly Agree</option>
+					<option value="2">2 - Agree</option>
+					<option value="3">3 - Neutral</option>
+					<option value="4">4 - Disagree</option>
+					<option value="5">5 - Strongly Disagree</option>
+				</select>
+			<h3>Question 5</h3>
+				<select id="q5">
+					<option value=""></option>
+					<option value="1">1 - Strongly Agree</option>
+					<option value="2">2 - Agree</option>
+					<option value="3">3 - Neutral</option>
+					<option value="4">4 - Disagree</option>
+					<option value="5">5 - Strongly Disagree</option>
+				</select>
+			<h3>Question 6</h3>
+				<select id="q6">
+					<option value=""></option>
+					<option value="1">1 - Strongly Agree</option>
+					<option value="2">2 - Agree</option>
+					<option value="3">3 - Neutral</option>
+					<option value="4">4 - Disagree</option>
+					<option value="5">5 - Strongly Disagree</option>
+				</select>
+			<h3>Question 7</h3>
+				<select id="q7">
+					<option value=""></option>
+					<option value="1">1 - Strongly Agree</option>
+					<option value="2">2 - Agree</option>
+					<option value="3">3 - Neutral</option>
+					<option value="4">4 - Disagree</option>
+					<option value="5">5 - Strongly Disagree</option>
+				</select>
+			<h3>Question 8</h3>
+				<select id="q8">
+					<option value=""></option>
+					<option value="1">1 - Strongly Agree</option>
+					<option value="2">2 - Agree</option>
+					<option value="3">3 - Neutral</option>
+					<option value="4">4 - Disagree</option>
+					<option value="5">5 - Strongly Disagree</option>
+				</select>
+			<h3>Question 9</h3>
+				<select id="q9">
+					<option value=""></option>
+					<option value="1">1 - Strongly Agree</option>
+					<option value="2">2 - Agree</option>
+					<option value="3">3 - Neutral</option>
+					<option value="4">4 - Disagree</option>
+					<option value="5">5 - Strongly Disagree</option>
+				</select>
+			<h3>Question 10</h3>
+				<select id="q10">
+					<option value=""></option>
+					<option value="1">1 - Strongly Agree</option>
+					<option value="2">2 - Agree</option>
+					<option value="3">3 - Neutral</option>
+					<option value="4">4 - Disagree</option>
+					<option value="5">5 - Strongly Disagree</option>
+				</select>
+			<br>
+			<br>
+			<button type="submit" id="submit">Submit</button>
+		</div>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#submit").on('click', function(){
+				var newFriend = {
+					name   : $("#name").val(),
+					photo  : $("#photo").val(),
+					values : [$("q1").val(),
+							  $("q2").val(),
+							  $("q3").val(),
+							  $("q4").val(),
+							  $("q5").val(),
+							  $("q6").val(),
+							  $("q7").val(),
+							  $("q8").val(),
+							  $("q9").val(),
+							  $("q10").val()]
+				};
+				console.log(newFriend);
+				console.log($("q1").val());
+				console.log(newFriend.values);
+				console.log(newFriend.values[0]);
+
+			});
+		});
+		</script>
+	</body>
+</html>
